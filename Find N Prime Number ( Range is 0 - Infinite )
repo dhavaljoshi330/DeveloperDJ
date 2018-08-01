@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class NprimeNumber {
+	public static void main(String[] args) {
+		System.out.println("=============== Program for Find Total N prime Number ==============");
+		System.out.println("Enter Number :");
+		long n=new Scanner(System.in).nextLong();
+		long counter=0,flag=0;
+		for(long i=2;i==i;i++)
+		{
+			flag=0;
+			for(int k=2;k<i;k++)
+				if(i%k==0)
+					flag=1;
+			if(flag==0)
+				if(counter==n)
+				break;
+				else{
+					System.out.println((counter+1)+" No is :- "+i);
+					counter++;
+				}
+		}
+		System.out.println("\n\n ------------- Developed By : 'DHAVAL JOSHI' -----------------");
+	}
+}
