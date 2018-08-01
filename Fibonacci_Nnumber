@@ -1,0 +1,35 @@
+import java.io.Console;
+import java.io.IOException;
+import java.util.Scanner;
+public class FIBONACCI_ARRAY {
+	public static void main(String[] args) {
+		System.out.println("\n|======================[ THIS PROGRAM IS CODED FOR FIND FIBONACCI SERIES UPTO 'N' ]=======================|\n");
+		boolean k=true;
+		do{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Ending Position Of The Series :-");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		a[0]=0;	a[1]=1;
+		for(int i=2;i<n;i++){
+			int temp=a[i-1]+a[i-2];
+			if(temp > n)
+				break;
+			else
+				a[i]=temp;
+		}
+		System.out.print("Fibonacci Series is :-\t"+a[0]);
+		for(int i=0;i<a.length;i++){
+			if(a[i] != 0) System.out.print("\t"+a[i]);
+		}
+		System.out.print("\nDo you want to continue (Y | N) :-");
+		if(sc.next().equalsIgnoreCase("Y"))
+			k=true;
+		else{
+			k=false;
+			System.out.println("Thanks For Using ....!!!! ");
+			break;
+		}
+		}while(k);
+	}
+}
