@@ -1,0 +1,30 @@
+import java.util.Scanner;
+/**
+ * @author     Dhaval Joshi
+ * @since      08-Aug-2018
+ * @see        Program to take infinite Value based on Integer , Program terminates when user enters the 0 Value , at Last Program Displays the Total of Entered Value
+ * @category   https://github.com/dhavaljoshi330/DeveloperDJ
+ */
+public class Demo1 {
+	private Demo1() {}
+	@SuppressWarnings({"resource"})
+	public static void main(String[] args) {
+		try {
+			boolean flag = true;
+			int total = 0;
+			Scanner sc = new Scanner(System.in);
+			while (flag) {
+				System.out.println("Enter a value");
+				int n = sc.nextInt();
+				if (n == 0) {
+					flag = false;
+				} else {
+					total+=n;
+				}
+			}
+			System.out.println("Total is :-" + total);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
